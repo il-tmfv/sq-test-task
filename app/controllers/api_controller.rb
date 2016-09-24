@@ -13,4 +13,9 @@ class ApiController < ApplicationController
   def check_request_format!
     bad_request_format if request.format != :json
   end
+
+  def render_ok
+    response.headers['Cache-Control'] = 'no-cache'
+    render json: ''
+  end
 end
