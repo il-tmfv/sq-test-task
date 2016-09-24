@@ -8,11 +8,11 @@ class Offer < ActiveRecord::Base
 
   after_create :change_data_after_create
 
-  before_validation :get_player
+  before_validation :get_info_for_validation
 
   private
 
-  def get_player
+  def get_info_for_validation
     @player = Player.find(player_id)
     @product = Product.find(product_id)
   end
