@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PlayerProductTest < ActiveSupport::TestCase
+class StorageProductTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
