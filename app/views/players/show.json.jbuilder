@@ -1,0 +1,1 @@
+json.(@player, :level, :exp, :balance)
