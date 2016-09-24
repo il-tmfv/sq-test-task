@@ -1,6 +1,6 @@
-class CreatePlayersProducts < ActiveRecord::Migration
+class CreatePlayerProducts < ActiveRecord::Migration
   def change
-    create_table :players_products do |t|
+    create_table :player_products do |t|
       t.integer :player_id
       t.integer :product_id
       t.integer :quantity
