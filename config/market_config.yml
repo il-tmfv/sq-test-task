@@ -1,0 +1,19 @@
+market:
+  players_quota: 10
+
+storage:
+  capacity: 15
+
+products:
+  food:
+    required_level: 0
+    price: 1.5
+  clothes:
+    required_level: 0
+    price: 5
+  gun:
+    required_level: 5
+    price: 100
+  medkit:
+    required_level: 0
+    price: 5.99
