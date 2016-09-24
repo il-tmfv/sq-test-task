@@ -24,7 +24,8 @@ players_count.times { |i|
       name: "Player##{i}",
       level: rand(0..10),
       exp: rand(0.0..1.0).round(1),
-      balance: rand(10.0..110.0).round(1)
+      balance: rand(10.0..110.0).round(1),
+      placed_products_quantity: 0
   )
   
   player.storage = Storage.create!(capacity: storage_capacity)
