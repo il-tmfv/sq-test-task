@@ -10,7 +10,7 @@
 		{
 			"name": "get player",
 			"request": {
-				"url": "localhost:3000/players/36",
+				"url": "localhost:3000/api/v1/players/36",
 				"method": "GET",
 				"header": [
 					{
@@ -35,7 +35,7 @@
 		{
 			"name": "get players",
 			"request": {
-				"url": "localhost:3000/players",
+				"url": "localhost:3000/api/v1/players",
 				"method": "GET",
 				"header": [
 					{
@@ -60,7 +60,7 @@
 		{
 			"name": "get offers",
 			"request": {
-				"url": "localhost:3000/offers",
+				"url": "localhost:3000/api/v1/offers",
 				"method": "GET",
 				"header": [
 					{
@@ -85,7 +85,7 @@
 		{
 			"name": "place offer",
 			"request": {
-				"url": "localhost:3000/offers",
+				"url": "localhost:3000/api/v1/offers",
 				"method": "POST",
 				"header": [
 					{
@@ -110,7 +110,7 @@
 		{
 			"name": "get offer",
 			"request": {
-				"url": "localhost:3000/offers/4",
+				"url": "localhost:3000/api/v1/offers/4",
 				"method": "GET",
 				"header": [
 					{

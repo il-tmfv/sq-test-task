@@ -7,9 +7,9 @@
 `application/json`
 
 ##### Routes
-- Получить данные рынка - `GET localhost:3000/offers`
-- Получить данные игрока - `GET localhost:3000/players/:id`
-- Выставить товар на рынок - `POST localhost:3000/offers`
+- Получить данные рынка - `GET localhost:3000/api/v1/offers`
+- Получить данные игрока - `GET localhost:3000/api/v1/players/:id`
+- Выставить товар на рынок - `POST localhost:3000/api/v1/offers`
 Пример тела запроса: 
 ```js
 {
@@ -19,4 +19,4 @@
 	"quantity": 2
 }
 ```
-- Купить товар с рынка - `POST localhost:3000/players/:buyer_id/buy/:offer_id`
+- Купить товар с рынка - `POST localhost:3000/api/v1/players/:buyer_id/buy/:offer_id`
