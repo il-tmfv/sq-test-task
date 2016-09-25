@@ -4,7 +4,11 @@ class OffersController < ApiController
   end
 
   def show
+    if params[:id].blank?
+      return render status: 400, json: { error: ApiError::INVALID_ARGUMENTS }
+    end
 
+    @offer = Offer.find(params[:id])
   end
 
   def create
