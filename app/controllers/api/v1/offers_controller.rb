@@ -1,4 +1,4 @@
-class OffersController < ApiController
+class Api::V1::OffersController < ApiController
   def index
     @offers = Offer.all
   end
