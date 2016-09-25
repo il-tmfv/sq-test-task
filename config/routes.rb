@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :offers, only: [:index, :show, :destroy, :update, :create]
+  resources :offers, only: [:index, :show, :create] do
+    match 'buy' => 'offers#buy', via: :post
+  end
+
   resources :players, only: [:show, :index]
 
   # The priority is based upon order of creation: first created -> highest priority.

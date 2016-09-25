@@ -26,10 +26,8 @@ class OffersController < ApiController
     end
   end
 
-  def destroy
-  end
+  def buy
 
-  def update
   end
 
   private
