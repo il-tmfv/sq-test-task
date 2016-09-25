@@ -18,17 +18,21 @@ class Offer < ActiveRecord::Base
   end
 
   def change_data_after_create
-    ActiveRecord::Base.transaction do
-      @player.placed_products_quantity += quantity
+    begin
+      ActiveRecord::Base.transaction do
+        @player.placed_products_quantity += quantity
 
-      storage_product = StorageProduct.where(
-          storage_id: @player.storage.id,
-          product_id: product_id
-      ).first
-      storage_product.quantity -= quantity
+        storage_product = StorageProduct.where(
+            storage_id: @player.storage.id,
+            product_id: product_id
+        ).first
+        storage_product.quantity -= quantity
 
-      @player.save
-      storage_product.save
+        @player.save
+        storage_product.save
+      end
+    rescue ActiveRecord::StatementInvalid
+      self.delete
     end
   end
 
