@@ -1,0 +1,1 @@
+json.(@player, :id, :name, :level, :exp, :balance, :placed_products_quantity)
