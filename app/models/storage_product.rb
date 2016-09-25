@@ -17,8 +17,7 @@ class StorageProduct < ActiveRecord::Base
   # end
 
   def player_should_not_be_greedy
-    sum = StorageProduct.group(:storage_id).having(storage_id: storage_id).sum(:quantity)
-    if sum[storage_id] + quantity > ConfigProvider.instance.capacity
+    if storage.free_space < quantity
       errors.add(:quantity, 'Player cannot overfill his storage')
     end
   end
