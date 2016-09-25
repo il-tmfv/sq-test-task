@@ -1,1 +1,1 @@
-json.(@player, :name, :level, :exp, :balance)
+json.(@player, :id, :name, :level, :exp, :balance, :placed_products_quantity)
